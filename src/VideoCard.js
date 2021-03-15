@@ -22,15 +22,18 @@ function VideoCard({id,source,title,likedislikeId}) {
   <source src={source.toString()} type="video/webm"></source>
 </video>
 
-    <div className="video__info">
+    <div className="video__info1" onClick={playVid}>
         <div className="text">
             <h4>{title}</h4> 
-            <i id={likedislikeId} onClick={likeDislike} class="fa fa-thumbs-up"></i>
-        </div>
-    </div>
             
+    </div>
+    </div>
+    <div className="display__likeshare">
+            <i id={likedislikeId} onClick={likeDislike} class="fa fa-thumbs-up"></i>
+            &nbsp;&nbsp;&nbsp;<i class="fa fa-share" aria-hidden="true"></i></div>
         </div>
         </div>
+       
     )
 }
 
